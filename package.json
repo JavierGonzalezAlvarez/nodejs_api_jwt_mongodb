@@ -4,7 +4,10 @@
   "description": "app in json in mongodb and nodejs & express",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./bin/www",
+    "lint": "eslint ./*.js",
+    "lint:fix": "eslint --fix ./*.js"
   },
   "keywords": [
     "nodejs"
