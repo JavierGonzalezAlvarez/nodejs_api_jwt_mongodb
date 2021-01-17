@@ -1,5 +1,5 @@
 //secret key (token)
-//const config = require('./auth.config');
+const config = require('./auth.config');
 
 const User = require('./model');
 const jwt = require('jsonwebtoken');
@@ -49,7 +49,7 @@ exports.getin = (req, res) => {
       if (!passwordIsValid) {
         return res.status(401).send({
           accessToken: null,
-          message: "wrong password!"
+          message: "sorry, password is wrong!"
         });
       }
 
@@ -58,6 +58,7 @@ exports.getin = (req, res) => {
         expiresIn: 172800 // 48 hours
       });
       
+      //results
       res.status(200).send({
         id: user._id,
         user: user.user,

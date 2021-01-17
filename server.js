@@ -29,7 +29,7 @@ app.listen(PORT, () => {
 
 const db = require('./model');
 
-//conexion to cloud
+//conexion to cloud from the app
 //user: javier
   //pss: 1234q
   //db: test
@@ -44,7 +44,7 @@ client.connect(err => {
 });
 */
 
-
+//localhost, acccess to the DB, establish a DB in case is not created
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/test', {    
     useCreateIndex: true,
@@ -52,13 +52,13 @@ mongoose.connect('mongodb://localhost:27017/test', {
     useUnifiedTopology: true
 });
 
-//una vez que tnemos conexion nos conectamos
+//once I get connection I get in
 mongoose.connection.once('open', () => {
     console.log('Connected to MongoDB')
   })
 
 
-  /*
+/*another way to connect
 //const mongoose = require('mongoose');
 db.mongoose
   //.connect(`mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`, {

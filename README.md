@@ -1,3 +1,4 @@
+## api in nodejs with JWT, in mongodb, mongoose and mongodb-compass
 
 # create a package.json with all features
 $ npm init -y
@@ -23,6 +24,7 @@ $ sudo service mongod start
 $ mongodb-compass
 
 
+## from POSTMAN
 # api url - create new user
 body/raw
 JSON
@@ -41,4 +43,15 @@ http://localhost:8080/api/newuser
 {
     "user": "javier2",
     "password": "223827uyewu"            
+}
+
+result:
+{
+    "id": "60042ebac625016d74454328",
+    "user": "javier3",
+    "isActive": true,
+    "isDeleted": false,
+    "createdAt": "2021-01-17T12:34:02.395Z",
+    "updatedAt": "2021-01-17T12:34:02.395Z",
+    "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMDQyZWJhYzYyNTAxNmQ3NDQ1NDMyOCIsImlhdCI6MTYxMDg4NzIyOCwiZXhwIjoxNjExMDYwMDI4fQ.vyD_H0KGSI1h8BesP3voeNAa4X1xRoDIc6mvsJ9vReM"
 }
